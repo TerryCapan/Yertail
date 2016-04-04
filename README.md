@@ -11,6 +11,7 @@ Ever struggle with finding inspiration when trying to write a story, poem or com
 ## Solution ##
 We will provide you with random words or images to help shape your tale. Words to start with. Pictures if we have time on day two of development. :)
 
+## A quote from the creator: ##
 "Wagging one's tail isn't enough. You must nurture it until it grows strong."
   Love, Terry Capan (Founder)
 
