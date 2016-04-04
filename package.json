@@ -12,7 +12,7 @@
   "scripts": {
     "start": "node server/server.js"
   },
-  "name": "recipes-angular",
+  "name": "yertail",
   "devDependencies": {
     "browser-sync": "^1.5.7",
     "chai": "^3.4.1",
