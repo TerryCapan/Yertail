@@ -12,7 +12,7 @@ angular.module('yerTales', [
     })
     .when('/tales', {
       templateUrl: 'tales/tales.html',
-      controller: 'RecipesController'
+      controller: 'TalesController'
     })
    .otherwise({
     redirectTo: '/tales'

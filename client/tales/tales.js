@@ -2,7 +2,7 @@ angular.module('yerTales.tales',[])
 
 .controller('TalesController', function($scope) {
   $scope.data = {};
-  // Recipes.getAll();
+  // Tales.getAll();
   //   .then(function(tales) {
   //     $scope.data.tales = tales;
   //   })
