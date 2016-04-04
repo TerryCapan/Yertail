@@ -2,7 +2,7 @@
   "name": "yertail",
   "version": "0.0.1",
   "description": "write tales",
-  "main": "index.js",
+  "main": "server/server.js",
   "repository": "",
   "license": "none",
   "private": false,
@@ -10,7 +10,7 @@
     "node": "0.12"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node server/server.js"
   },
   "name": "recipes-angular",
   "devDependencies": {
