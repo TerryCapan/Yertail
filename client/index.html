@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='yerTales'>
 <head>
   <meta charset="utf-8" />
   <title>YER TAIL</title>
 </head>
 <body>
   <h1>YER TAIL</h1>
-   <!-- <nav  class="navigation">
+   <nav  class="navigation">
     <ul>
       <li> 
-        <a ui-sref-active='selected' href="">Tales</a>
+        <a ui-sref-active='selected' href="#/tales">Tales</a>
       </li>
       <li>
-        <a ui-sref-active='selected' href="">Add Another Tale</a>
+        <a ui-sref-active='selected' href="#/input">Add Another Tale</a>
       </li>
     </ul>
-  </nav> -->
+  </nav>
   <div>Write me things</div>
-  <div></div>
+  <div ng-view></div>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
+    <script src="tales/tales.js"></script>
+    <script src="input/input.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
