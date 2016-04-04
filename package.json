@@ -1,4 +1,17 @@
 {
+  "name": "yertail",
+  "version": "0.0.1",
+  "description": "write tales",
+  "main": "index.js",
+  "repository": "",
+  "license": "none",
+  "private": false,
+  "engines": {
+    "node": "0.12"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
   "name": "recipes-angular",
   "devDependencies": {
     "browser-sync": "^1.5.7",
