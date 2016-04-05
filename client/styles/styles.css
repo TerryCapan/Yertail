@@ -11,7 +11,20 @@ body {
 .input {
   width: 70%;
   height: 30px;
-  border: 2px solid green;
   font-size: medium;
   margin-bottom: 8px
+}
+
+.incomplete {
+  color: red;
+}
+
+.tales .column {
+  color: rgb(127, 75, 0);
+  border: 1px solid black;
+}
+
+.tales .author {
+  font-size: 20px;
+  font-weight: bold;
 }

@@ -15,6 +15,6 @@ angular.module('yerTales', [
       controller: 'TalesController'
     })
    .otherwise({
-    redirectTo: '/tales'
+    redirectTo: '/input'
    })
 });

@@ -14,11 +14,13 @@ angular.module('yerTales.input',[])
       [$scope.data.randomWords[3], $scope.textThree],
       $scope.username
      ];
-    for ( var i = 0; i < current.length; i++ ) {
+    for ( var i = 0; i < current.length -1; i++ ) {
       if ( !current[i][1]  || current[i][1] === '' ) {
         complete = false;
-        
       }
+    }
+    if ( !current[4]  || current[4] === '' ) {
+      complete = false;
     }
     if ( complete ) {
         Tales.addTale(current);
@@ -26,6 +28,7 @@ angular.module('yerTales.input',[])
         console.log(Tales.tales)
     } else {
       //show div with message to fill out empty inputs
+      $scope.incomplete = true;
       console.log('fill em all in, pally')
     }
   };

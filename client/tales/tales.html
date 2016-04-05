@@ -2,11 +2,29 @@
 <div ng-controller='TalesController' ng-init='getAll()'>
   <h1>Tales:</h1>
   <div class='tales' ng-repeat='tale in data.tales | filter:search'>
-    <div>A Tale by {{ tale[4] }}:</div>
-    <div>{{ tale[0][0] }} : {{ tale[0][1] }}</div>
-    <div>{{ tale[1][0] }} : {{ tale[1][1] }}</div>
-    <div>{{ tale[2][0] }} : {{ tale[2][1] }}</div>
-    <div>{{ tale[3][0] }} : {{ tale[3][1] }}</div>
+    <div class='author'>A Tale by: {{ tale[4] }}</div>
+    <table>
+      <tr class='column'>
+        <td>Inspiration</td>
+        <td>Creation</td>
+      </tr>
+      <tr>
+        <td>{{ tale[0][0] }}</td>
+        <td>{{ tale[0][1] }}</td>
+      </tr>
+      <tr>
+        <td>{{ tale[1][0] }}</td>
+        <td>{{ tale[1][1] }}</td>
+      </tr>
+      <tr>
+        <td>{{ tale[2][0] }}</td>
+        <td>{{ tale[2][1] }}</td>
+      </tr>
+      <tr>
+        <td>{{ tale[3][0] }}</td>
+        <td>{{ tale[3][1] }}</td>
+      </tr>
+    </table>
     <br>
   </div>
 </div>
