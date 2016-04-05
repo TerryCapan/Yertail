@@ -1,8 +1,12 @@
 <input type='text' ng-model='search' placeholder="Filter Tales"></input>
-<div ng-controller='TalesController'>
+<div ng-controller='TalesController' ng-init='getAll()'>
   <h1>Tales:</h1>
   <div class='tales' ng-repeat='tale in data.tales | filter:search'>
-  
-    
+    <div>A Tale by {{ tale[4] }}:</div>
+    <div>{{ tale[0][0] }} : {{ tale[0][1] }}</div>
+    <div>{{ tale[1][0] }} : {{ tale[1][1] }}</div>
+    <div>{{ tale[2][0] }} : {{ tale[2][1] }}</div>
+    <div>{{ tale[3][0] }} : {{ tale[3][1] }}</div>
+    <br>
   </div>
 </div>

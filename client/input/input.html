@@ -1,13 +1,16 @@
 
 <div ng-controller='InputController' ng-init='populateWords()'>
   <h1>Add Tale or Poem</h1>
-  <h4>Using the filler words for inspiration, write yourself a little ditty.</h4>
-  <div class='tales' ng-repeat='word in data.randomWords'>
-    <!-- <div>{{ word }}</div> -->
-      <form name="tale" ng-submit='addTale()'>
-      <input name='tale' class='input' type='text' placeholder={{word}} ng-class="{'error': shorten.$invalid && shorten.$dirty}">
+  <input ng-model='username' placeholder="Author"></input>
+  <h4>Use the filler words for inspiration and write yourself a little ditty.</h4>
+  <div class='tales' >
+    <form name="tale" ng-submit='addTale()'>
+      <input name='tale' class='input' type='text' ng-model='textZero' placeholder={{data.randomWords[0]}}>
+      <input name='tale' class='input' type='text' ng-model='textOne' placeholder={{data.randomWords[1]}}>
+      <input name='tale' class='input' type='text' ng-model='textTwo' placeholder={{data.randomWords[2]}}>
+      <input name='tale' class='input' type='text' ng-model='textThree' placeholder={{data.randomWords[3]}}>
+      <br>
+      <button>submit</button>
     </form>
-    <br>
   </div>
-  <button>submit</button>
 </div>

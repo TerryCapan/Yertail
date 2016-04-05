@@ -1,14 +1,14 @@
 angular.module('yerTales.services', [])
 
 .factory('Tales', function() {
- var tales = [];
- var addTale = function() {
-
- };
- return {
+  var tales = [];
+  var addTale = function(tale) {
+    tales.push(tale);
+  };
+  return {
   tales: tales,
   addTale: addTale
- }
+  }
 
 })
 
