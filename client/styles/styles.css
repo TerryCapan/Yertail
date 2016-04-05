@@ -7,3 +7,10 @@ body {
 #title {
   color: rgb(127, 75, 0);
 }
+
+.input {
+  width: 70%;
+  height: 30px;
+  border: 2px solid green;
+  font-size: medium;
+}
