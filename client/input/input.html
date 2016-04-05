@@ -1,5 +1,12 @@
-<input></input>
-<div ng-controller='InputController'>
+
+<div ng-controller='InputController' ng-init='populateWords()'>
   <h1>Add Tale</h1>
-  <div>{{message}}</div>
+  <div class='tales' ng-repeat='word in data.randomWords'>
+    <div>{{ word }}</div>
+      <form name="tale" ng-submit='addTale()'>
+      <input name='tale' type='text' placeholder="Write your goodies here" ng-class="{'error': shorten.$invalid && shorten.$dirty}">
+      <button>submit</button>
+    </form>
+    
+  </div>
 </div>
