@@ -1,6 +1,6 @@
 angular.module('yerTales.tales',[])
 
-.controller('TalesController', function($scope) {
+.controller('TalesController', function($scope, Tales) {
   $scope.data = {};
   // Tales.getAll();
   //   .then(function(tales) {
