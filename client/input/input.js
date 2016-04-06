@@ -8,24 +8,28 @@ angular.module('yerTales.input',[])
   };
   $scope.addTale = function() {
     var complete = true;
-    var current = [[$scope.data.randomWords[0], $scope.textZero],
+    var current = [
+      [$scope.data.randomWords[0], $scope.textZero],
       [$scope.data.randomWords[1], $scope.textOne],
       [$scope.data.randomWords[2], $scope.textTwo],
-      [$scope.data.randomWords[3], $scope.textThree],
-      $scope.username
+      [$scope.data.randomWords[3], $scope.textThree]
      ];
+    var username = $scope.username;
     for ( var i = 0; i < current.length -1; i++ ) {
       if ( !current[i][1]  || current[i][1] === '' ) {
         complete = false;
       }
     }
-    if ( !current[4]  || current[4] === '' ) {
+    if ( !username  || username === '' ) {
       complete = false;
     }
     if ( complete ) {
-        Tales.addTale(current);
+        var newTale = {
+          tale: current,
+          username: username
+        }
+        Tales.addTale(newTale);
         $location.path('/tales');
-        console.log(Tales.tales)
     } else {
       //show div with message to fill out empty inputs
       $scope.incomplete = true;

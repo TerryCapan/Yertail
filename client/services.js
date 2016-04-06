@@ -1,13 +1,30 @@
 angular.module('yerTales.services', [])
 
-.factory('Tales', function() {
-  var tales = [];
+.factory('Tales', function($http) {
   var addTale = function(tale) {
-    tales.push(tale);
+    return $http({
+      method: 'POST',
+      url: 'api/tales',
+      data: tale
+    })
+    .then(function(tale) {
+      return tale;
+    })
   };
+
+  var getTales = function() {
+    return $http({
+      method: 'GET',
+      url: 'api/tales',
+    })
+    .then(function(tales) {
+      return tales.data;
+    })
+  }
+
   return {
-  tales: tales,
-  addTale: addTale
+  addTale: addTale,
+  getTales: getTales
   }
 
 })
