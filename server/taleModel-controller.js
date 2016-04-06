@@ -28,6 +28,7 @@ module.exports = {
   getTales: function (req, res, next) {
     findAllTales({})
       .then(function(tales) {
+        console.log(tales)
         res.json(tales);
       })
       .fail(function (error) {
