@@ -15,7 +15,10 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client'));
 
 app.route('/api/tales')
-  .get(controller.getTales)
+  .get(function(req, res) {
+    res.send('Get a random book');
+    // controller.getTales(req, res)
+  })
   .post(controller.addTale)
 
 app.get('*', function(req, res) {

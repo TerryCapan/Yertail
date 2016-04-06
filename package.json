@@ -10,12 +10,13 @@
     "node": "0.12"
   },
   "scripts": {
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "test": "mocha test/talesSpec.js"
   },
-  "name": "yertail",
   "devDependencies": {
     "browser-sync": "^1.5.7",
     "chai": "^3.4.1",
+    "chai-http": "^2.0.1",
     "clone-stats": "0.0.1",
     "gulp": "^3.8.5",
     "gulp-nodemon": "^1.0.4",
