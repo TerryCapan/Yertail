@@ -1,8 +1,6 @@
 var mongoose = require('mongoose');
 var Q = require('q');
 
-var createTale = Q.nbind(Tale.create, Tale);
-var findAllTales = Q.nbind(Tale.find, Tale);
 
 var TaleSchema = new mongoose.Schema({
   tale: [],
@@ -10,6 +8,9 @@ var TaleSchema = new mongoose.Schema({
 })
 
 mongoose.model('Tale', TaleSchema);
+
+var createTale = Q.nbind(Tale.create, Tale);
+var findAllTales = Q.nbind(Tale.find, Tale);
 
 module.exports = {
   addTale: function(req, res, next) {
