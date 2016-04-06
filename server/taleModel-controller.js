@@ -14,16 +14,15 @@ var findAllTales = Q.nbind(Tale.find, Tale);
 
 module.exports = {
   addTale: function(req, res, next) {
-    // createTale(req.body.data)
-    //   .then(function (createdTale) {
-    //     if (createdTale) {
-    //       res.json(createdTale);
-    //     }
-    //   })
-    //   .fail(function (error) {
-    //     next(error);
-    //   });
-    console.log('herere', req.body)
+    createTale(req.body)
+      .then(function (createdTale) {
+        if (createdTale) {
+          res.json(createdTale);
+        }
+      })
+      .fail(function (error) {
+        next(error);
+      });
   },
 
   getTales: function (req, res, next) {
