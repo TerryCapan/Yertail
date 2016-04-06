@@ -4,7 +4,7 @@ angular.module('yerTales.services', [])
   var addTale = function(tale) {
     return $http({
       method: 'POST',
-      url: 'api/tales',
+      url: '/api/tales',
       data: tale
     })
     .then(function(tale) {
@@ -15,7 +15,7 @@ angular.module('yerTales.services', [])
   var getTales = function() {
     return $http({
       method: 'GET',
-      url: 'api/tales',
+      url: '/api/tales',
     })
     .then(function(tales) {
       return tales.data;
