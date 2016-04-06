@@ -7,7 +7,7 @@ var TaleSchema = new mongoose.Schema({
   username: String
 })
 
-mongoose.model('Tale', TaleSchema);
+var Tale = mongoose.model('Tale', TaleSchema);
 
 var createTale = Q.nbind(Tale.create, Tale);
 var findAllTales = Q.nbind(Tale.find, Tale);
