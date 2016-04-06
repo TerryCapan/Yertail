@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var path = require('path');
-var controller = require ('taleModel-controller.js')
+var controller = require ('./taleModel-controller.js')
 var app = express();
 
 mongoose.connect('mongodb://TerryCapanTwo:MongoPass88@ds015690.mlab.com:15690/heroku_6gkv8hcv')
