@@ -28,7 +28,6 @@ angular.module('yerTales.input',[])
           tale: current,
           username: username
         }
-        console.log(newTale, 'input.js')
         Tales.addTale(newTale);
         $location.path('/tales');
     } else {
