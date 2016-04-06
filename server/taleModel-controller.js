@@ -23,7 +23,7 @@ module.exports = {
     //   .fail(function (error) {
     //     next(error);
     //   });
-    console.log(req.body.data)
+    console.log('herere', req.body.data)
   },
 
   getTales: function (req, res, next) {
