@@ -2,6 +2,7 @@ angular.module('yerTales.services', [])
 
 .factory('Tales', function($http) {
   var addTale = function(tale) {
+    console.log(tale, 'services.js')
     return $http({
       method: 'POST',
       url: '/api/tales',
